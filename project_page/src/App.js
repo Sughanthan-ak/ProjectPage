@@ -1,5 +1,4 @@
 import logo from './logo.svg';
-import './App.css';
 import LabelImportantOutlinedIcon from '@mui/icons-material/LabelImportantOutlined';
 import Paper from '@mui/material/Paper';
 import AddIcon from '@mui/icons-material/Add';
@@ -20,38 +19,38 @@ function App() {
   const column3Papers = [1, 1, 1];
 
   return (
-    <div className="total">
-      <div className="topleft"></div>
-      <div className="topright"></div>
-      <div className="Main">
-        <div className="Title">
-          <div className="ToDoTitle A">
-            <div className="ToDo03 B">
+    <div className="total" style={{ backgroundColor: 'rgb(248,250,252)', width: '100vw', height: '100vh' }}>
+      <div className="topleft" style={{ width: '300px', height: '100vh', background: 'linear-gradient(179.66deg, #01DCBA -0.77%, #7D32CB 98.56%, #7F30CB 98.57%)', borderTopRightRadius: '10px', borderBottomRightRadius: '10px', position: 'fixed' }}></div>
+      <div className="topright" style={{ backgroundColor: 'rgb(255, 255, 255)', width: '100vw', height: '50px' }}></div>
+      <div className="Main" style={{ width: '1250px', height: '630px', position: 'fixed', top: '50px', right: '0px' }}>
+        <div className="Title" style={{ width: '1250px', height: '50px', display: 'flex', position: 'fixed', left: '280px', justifyContent: 'space-around', alignItems: 'center' }}>
+          <div className="ToDoTitle A" style={{ width: '300px', fontWeight: '700', fontSize: 'medium', display: 'flex', justifyContent: 'space-evenly', alignItems: 'center', gap: '80px' }}>
+            <div className="ToDo03 B" style={{ width: '150px', display: 'flex', justifyContent: 'left', alignItems: 'center', gap: '10px' }}>
               <div>To Do <span>(03)</span></div>
-              <div className="Blk C"></div>
+              <div className="Blk C" style={{ backgroundColor: 'black', display: 'flex', justifyContent: 'center', alignItems: 'center' }}></div>
             </div>
-            <div className="Plus1 D"><AddIcon/> <MoreHorizIcon/></div>
+            <div className="Plus1 D" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'rgb(149,164,185)', gap: '20px' }}><AddIcon /> <MoreHorizIcon /></div>
           </div>
-          <div className="ProgressTitle A">
-            <div className="Progress02 B">
+          <div className="ProgressTitle A" style={{ width: '300px', fontWeight: '700', fontSize: 'medium', display: 'flex', justifyContent: 'space-evenly', alignItems: 'center', gap: '80px' }}>
+            <div className="Progress02 B" style={{ width: '150px', display: 'flex', justifyContent: 'left', alignItems: 'center', gap: '10px' }}>
               <div>In Progress <span>(02)</span></div>
-              <div className="Ble C"></div>
+              <div className="Ble C" style={{ backgroundColor: 'blue', display: 'flex', justifyContent: 'center', alignItems: 'center' }}></div>
             </div>
-            <div className="Plus2 D"><AddIcon/> <MoreHorizIcon/></div>
+            <div className="Plus2 D" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'rgb(149,164,185)', gap: '20px' }}><AddIcon /> <MoreHorizIcon /></div>
           </div>
-          <div className="ReviewTitle A">
-            <div className="Review10 B">
+          <div className="ReviewTitle A" style={{ width: '300px', fontWeight: '700', fontSize: 'medium', display: 'flex', justifyContent: 'space-evenly', alignItems: 'center', gap: '80px' }}>
+            <div className="Review10 B" style={{ width: '150px', display: 'flex', justifyContent: 'left', alignItems: 'center', gap: '10px' }}>
               <div>In Review <span>(10)</span></div>
-              <div className="Yel C"></div>
+              <div className="Yel C" style={{ backgroundColor: 'yellow', display: 'flex', justifyContent: 'center', alignItems: 'center' }}></div>
             </div>
-            <div className="Plus3 D"><AddIcon/> <MoreHorizIcon/></div>
+            <div className="Plus3 D" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'rgb(149,164,185)', gap: '20px' }}><AddIcon /> <MoreHorizIcon /></div>
           </div>
         </div>
-        <div className="ColumnContainer">
-          <div className="Column1">
+        <div className="ColumnContainer" style={{ marginTop: '50px', display: 'flex', justifyContent: 'space-around' }}>
+          <div className="Column1" style={{ width: '300px', display: 'flex', flexDirection: 'column' }}>
             {column1Papers.map((_, index) => (
-              <Paper key={`column1-paper-${index}`} elevation={5} style={{ marginBottom: '20px' }}>
-                <div className={`card card${index + 1}`} style={{ width: '300px', height: '180px', padding: '10px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+              <Paper key={`column1-paper-${index}`} elevation={5} style={{ marginBottom: '20px', width: '300px', height: '180px' }}>
+                <div className={`card card${index + 1}`} style={{ padding: '10px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                   <div style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
                     <LabelImportantOutlinedIcon style={{ color: 'rgb(235,87,87)' }} />
                     <p style={{ marginLeft: '5px' }}>Material Cost</p>
@@ -81,10 +80,10 @@ function App() {
               </Paper>
             ))}
           </div>
-          <div className="Column2">
+          <div className="Column2" style={{ width: '300px', display: 'flex', flexDirection: 'column' }}>
             {column2Papers.map((_, index) => (
-              <Paper key={`column2-paper-${index}`} elevation={5} style={{ marginBottom: '20px' }}>
-                <div className={`card card${index + 4}`} style={{ width: '300px', height: '180px', padding: '10px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+              <Paper key={`column2-paper-${index}`} elevation={5} style={{ marginBottom: '20px', width: '300px', height: '180px' }}>
+                <div className={`card card${index + 4}`} style={{ padding: '10px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                   <div style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
                     <LabelImportantOutlinedIcon style={{ color: 'rgb(235,87,87)' }} />
                     <p style={{ marginLeft: '5px' }}>Material Cost</p>
@@ -114,10 +113,10 @@ function App() {
               </Paper>
             ))}
           </div>
-          <div className="Column3">
+          <div className="Column3" style={{ width: '300px', display: 'flex', flexDirection: 'column' }}>
             {column3Papers.map((_, index) => (
-              <Paper key={`column3-paper-${index}`} elevation={5} style={{ marginBottom: '20px' }}>
-                <div className={`card card${index + 6}`} style={{ width: '300px', height: '180px', padding: '10px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+              <Paper key={`column3-paper-${index}`} elevation={5} style={{ marginBottom: '20px', width: '300px', height: '180px' }}>
+                <div className={`card card${index + 6}`} style={{ padding: '10px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                   <div style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
                     <LabelImportantOutlinedIcon style={{ color: 'rgb(235,87,87)' }} />
                     <p style={{ marginLeft: '5px' }}>Material Cost</p>
